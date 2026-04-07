@@ -87,6 +87,13 @@
 </div>
 
 <style>
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
   .britpop-quiz,
   .britpop-quiz *,
   .britpop-quiz *::before,
@@ -96,7 +103,7 @@
 
   .britpop-quiz {
     --britpop-bg: #ffffff;
-    --britpop-frame-height: clamp(500px, 68vh, 620px);
+    --britpop-frame-height: 100dvh;
     --britpop-panel: #ffffff;
     --britpop-text: #111111;
     --britpop-line: #111111;
@@ -113,9 +120,10 @@
     --britpop-display-font: "Cutive", Georgia, serif;
     position: relative;
     width: 100%;
-    max-width: 1040px;
+    max-width: 1200px;
+    height: 100dvh;
     margin: 0 auto;
-    padding: clamp(16px, 3vw, 24px);
+    padding: 0;
     color: var(--britpop-text);
     background: var(--britpop-bg);
     font-family: var(--britpop-body-font);
@@ -126,8 +134,8 @@
     display: grid;
     gap: var(--britpop-space-4);
     align-content: start;
-    height: var(--britpop-frame-height);
-    min-height: 0;
+    height: 100%;
+    min-height: 100%;
     padding: clamp(20px, 3.5vw, 40px);
     border: 1px solid var(--britpop-line);
     background: var(--britpop-panel);
@@ -509,13 +517,14 @@
 
   @media (max-width: 680px) {
     .britpop-quiz {
-      --britpop-frame-height: clamp(480px, 76svh, 560px);
-      padding: 12px;
+      --britpop-frame-height: 100dvh;
+      height: 100dvh;
+      padding: 0;
     }
 
     .britpop-quiz__screen {
-      height: var(--britpop-frame-height);
-      min-height: 0;
+      height: 100%;
+      min-height: 100%;
       padding: 20px 16px;
     }
 
